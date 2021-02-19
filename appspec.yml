@@ -2,13 +2,13 @@ version: 0.0
 os: linux
 files:
 - source: /
-destination: /var/www/html/hello-project/
+  destination: /var/www/html/hello-project/
 hooks:
-BeforeInstall:
-- location: beforeinstall.sh
-timeout: 300
-runas: root
-AfterInstall:
-- location: afterinstall.sh
-timeout: 300
-runas: root
+ BeforeInstall:
+  - location: beforeinstall.sh
+    timeout: 300
+    runas: root
+ AfterInstall:
+  - location: afterinstall.sh
+    timeout: 300
+    runas: root
